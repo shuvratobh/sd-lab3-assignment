@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+/* src/App.css */
+body {
+  background-color: #e9ecef; /* A light, plain grey */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Typography */
+h1 {
+  font-size: 2rem;
+}
+p {
+  line-height: 1.6;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Author Info */
+.author-box {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+  margin: 1.5rem 0;
+}
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.author-name {
+  font-weight: bold;
+}
+.author-date {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+/* Reaction Bar */
+.reaction-bar {
+  display: flex;
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+.reaction-button {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 20px; /* Different from demo */
+  cursor: pointer;
+  font-weight: 500;
+}
+.reaction-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Comment Box */
+.comment-form {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.comment-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px 0 0 5px;
+}
+.comment-submit-btn {
+  padding: 0 20px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Individual Comment */
+.comment {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.comment-author-name {
+  font-weight: bold;
+}
+.comment-text {
+  margin: 5px 0;
+}
+.comment-actions span {
+  font-size: 0.85em;
+  color: #6c757d;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.comment-actions span.active {
+  color: #007bff;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+.page-btn {
+  padding: 8px 12px;
+  margin: 0 4px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  cursor: pointer;
+}
+.page-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Author Profile Page */
+.profile-card {
+  text-align: center;
+  padding: 40px;
+}
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
